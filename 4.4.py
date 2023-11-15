@@ -6,6 +6,7 @@ raam.title("Auto")
 tahvel = Canvas(raam, width = 600)
 tahvel.pack()
 
+#See ei saa läbi OCR testi
 tahvel.create_polygon(200, 100, 150, 150, 150, 225, 400, 225, 400, 100, fill="red")
 tahvel.create_rectangle(275, 125, 200, 175, fill="blue")
 tahvel.create_rectangle(375, 125, 300, 175, fill="blue")

@@ -18,7 +18,7 @@ def vitamiin_D(seerum):
 inimesteArv = 0
 
 for i in andmed:
-    if i == 75:
+    if float(i) > 75:
         inimesteArv += 1
     print("Tase: " + i + " nmol/l - Vitamiin D annus: " + str(vitamiin_D(float(i))) + " mikrogrammi")
    

@@ -2,12 +2,12 @@ failiNimi = input("Sisesta faili nimi: ")
 fail = open(failiNimi, encoding = "UTF-8")
 hinded = []
 for rida in fail:
-    hinded.append(rida.strip())
+    hinded.append(int(rida.strip()))
 fail.close()
 
-def hinnete_keskmine():
+def hinnete_keskmine(hinded):
     kokku = 0
-    if hinded.count('1') > 0 or hinded.count('2') > 0:
+    if hinded.count(1) > 0 or hinded.count(2) > 0:
         return -1
     else:
         for hinne in hinded:

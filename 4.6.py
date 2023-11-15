@@ -2,6 +2,7 @@ from tkinter import *
 import requests
 from PIL import ImageTk, Image
 
+# Ma ei viitsi teha ka seda, proovi ise teha ilma pildita
 imageUrl="https://emojiisland.com/cdn/shop/products/Emoji_Icon_-_Smiling_large.png?v=1571606089"
 
 raam = Tk()

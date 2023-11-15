@@ -2,6 +2,7 @@ from tkinter import *
 import requests
 from PIL import ImageTk, Image
 
+# Ma ei viitsi teha seda, proovi ise teha ilma pildita
 imageUrl = "https://rukman.ee/wp-content/uploads/2022/03/Picture3.jpg"
 
 raam = Tk()
