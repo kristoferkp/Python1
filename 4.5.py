@@ -7,7 +7,7 @@ imageUrl = "https://rukman.ee/wp-content/uploads/2022/03/Picture3.jpg"
 
 raam = Tk()
 raam.title("Lill")
-raam.geometry("700x500")
+raam.geometry("600x600")
 
 tahvel = Canvas(raam, width=600, height=400)
 tahvel.pack()
