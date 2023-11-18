@@ -1,10 +1,10 @@
-from tkinter import *
+import tkinter
 
-raam = Tk()
+raam = tkinter.Tk()
 raam.title("Emotikon")
 raam.geometry("600x600")
 
-tahvel = Canvas(raam, width=600, height=600)
+tahvel = tkinter.Canvas(raam, width=600, height=600)
 tahvel.pack()
 
 # Create a yellow circle for the face of the emoji
