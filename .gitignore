@@ -6,7 +6,7 @@ __pycache__/
 # C extensions
 *.so
 
-# Python venv files
+# Python files that something added, don't really know tbh
 include/
 lib/
 scripts/

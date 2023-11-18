@@ -7,7 +7,7 @@ imageUrl="https://emojiisland.com/cdn/shop/products/Emoji_Icon_-_Smiling_large.p
 
 raam = Tk()
 raam.title("Emotikon")
-raam.geometry("700x500")
+raam.geometry("600x600")
 
 tahvel = Canvas(raam, width=600, height=400)
 tahvel.pack()
