@@ -1,26 +1,20 @@
 from tkinter import *
-import requests
-from PIL import ImageTk, Image
-
-# Ma ei viitsi teha ka seda, proovi ise teha ilma pildita
-imageUrl="https://emojiisland.com/cdn/shop/products/Emoji_Icon_-_Smiling_large.png?v=1571606089"
 
 raam = Tk()
 raam.title("Emotikon")
 raam.geometry("600x600")
 
-tahvel = Canvas(raam, width=600, height=400)
+tahvel = Canvas(raam, width=600, height=600)
 tahvel.pack()
-tahvel.place(anchor="center", relx=0.5, rely=0.5)
 
-imgData = requests.get(imageUrl).content
+# Create a yellow circle for the face of the emoji
+tahvel.create_oval(100, 100, 500, 500, fill="yellow")
 
-with open("image.jpg", "wb") as handler:
-    handler.write(imgData)
+# Create two smaller black circles for the eyes of the emoji
+tahvel.create_oval(200, 200, 250, 250, fill="black")
+tahvel.create_oval(350, 200, 400, 250, fill="black")
 
-img = ImageTk.PhotoImage(Image.open("image.jpg"))
-
-label = Label(raam, image=img)
-label.pack()
+# Create an arc for the smile of the emoji
+tahvel.create_arc(200, 250, 400, 450, start=0, extent=-180, fill="black")
 
 raam.mainloop()
