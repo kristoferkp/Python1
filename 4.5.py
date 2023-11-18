@@ -1,26 +1,26 @@
 from tkinter import *
-import requests
-from PIL import ImageTk, Image
-
-# Ma ei viitsi teha seda, proovi ise teha ilma pildita
-imageUrl = "https://rukman.ee/wp-content/uploads/2022/03/Picture3.jpg"
+import math
 
 raam = Tk()
 raam.title("Lill")
-raam.geometry("700x500")
+raam.geometry("600x600")
 
-tahvel = Canvas(raam, width=600, height=400)
+tahvel = Canvas(raam, width=600, height=600)
 tahvel.pack()
-tahvel.place(anchor="center", relx=0.5, rely=0.5)
 
-imgData = requests.get(imageUrl).content
+center_x, center_y = 300, 300  # center point
+radius = 100  # radius of rotation
+oval_width, oval_height = 200, 200  # size of ovals
 
-with open("image.jpg", "wb") as handler:
-    handler.write(imgData)
+for i in range(12):
+    angle = 2 * math.pi * i / 12  # angle of each oval
+    top_left_x = center_x + radius * math.cos(angle) - oval_width / 2
+    top_left_y = center_y + radius * math.sin(angle) - oval_height / 2
+    bottom_right_x = top_left_x + oval_width
+    bottom_right_y = top_left_y + oval_height
+    tahvel.create_oval(top_left_x, top_left_y, bottom_right_x, bottom_right_y, fill="blue")
 
-img = ImageTk.PhotoImage(Image.open("image.jpg"))
+tahvel.create_oval(200, 200, 400, 400, fill="#FFFF00")
 
-label = Label(raam, image=img)
-label.pack()
 
 raam.mainloop()
