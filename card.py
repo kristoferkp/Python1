@@ -1,9 +1,12 @@
+# Import the turtle module for graphics
 import turtle
 from random import randint
 
+# Set the screen size and background color
 turtle.screensize(600, 600)
 turtle.bgcolor("lightblue")
 
+# Function to draw a triangle
 def draw_triangle(t, length, color):
     t.fillcolor(color)
     t.begin_fill()
@@ -12,6 +15,7 @@ def draw_triangle(t, length, color):
         t.left(120)
     t.end_fill()
 
+# Function to draw a tree
 def draw_tree(t, start_size, x, y):
     t.penup()
     t.goto(x, y)
@@ -31,7 +35,7 @@ def draw_tree(t, start_size, x, y):
     t.pendown()
     draw_rectangle(t, start_size*0.2, "brown")
 
-
+# Function to draw a rectangle
 def draw_rectangle(t, length, color):
     t.fillcolor(color)
     t.begin_fill()
@@ -42,12 +46,14 @@ def draw_rectangle(t, length, color):
         t.right(90)
     t.end_fill()
 
+# Function to draw a circle
 def draw_circle(t, radius, color):
     t.fillcolor(color)
     t.begin_fill()
     t.circle(radius)
     t.end_fill()
 
+# Function to draw a snowman
 def draw_snowman():
     snowman = turtle.Turtle()
     snowman.speed(0)
@@ -92,10 +98,7 @@ def draw_snowman():
         snowman.left(90)
         snowman.pendown()
 
-
-
     snowman.hideturtle()
-
 
 # Create a turtle to draw the tree
 tree_turtle = turtle.Turtle()
@@ -105,6 +108,7 @@ tree_turtle.speed(0)
 num_trees = 15
 x_spacing = 800 // num_trees  # Assuming the total available x-space is 800 units
 
+# Loop to draw multiple trees
 for i in range(num_trees):
     x = -400 + i * x_spacing  # Calculate the x-coordinate for each tree
     y = randint(-200, 300)  # Keep the y-coordinate random
@@ -112,6 +116,7 @@ for i in range(num_trees):
 
 tree_turtle.hideturtle()
 
+# Create a turtle to write a message
 message_turtle = turtle.Turtle()
 message_turtle.penup()
 message_turtle.goto(-150, -300)
@@ -120,7 +125,8 @@ message_turtle.color("white")
 message_turtle.write("Häid jõule!", font=("Roboto", 48, "bold"))
 message_turtle.hideturtle()
 
-
+# Draw the snowman
 draw_snowman()
 
+# Finish drawing
 turtle.done()

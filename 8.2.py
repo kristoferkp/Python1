@@ -6,6 +6,15 @@ for i in fail:
 fail.close()
 
 def vitamiin_D(seerum):
+    """
+    Calculate the recommended vitamin D dosage based on the serum level.
+
+    Parameters:
+    seerum (float): The serum level of vitamin D.
+
+    Returns:
+    int: The recommended vitamin D dosage in micrograms.
+    """
     if seerum > 75:
         return 20
     elif seerum > 50 and seerum <= 75:
