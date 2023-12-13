@@ -5,7 +5,7 @@ def raha_eurodes(kastideArv, kiloHind):
 
 failiNimi = input("Sisesta faili nimi: ")
 fail = open(failiNimi, "r", encoding="UTF-8")
-andmed= []
+andmed= [] # Example file contents 14, 15, 16, 15, 14, 14, 10
 
 for i in fail:
     andmed.append(int(i.strip()))
